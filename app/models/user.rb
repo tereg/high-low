@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   
   include BCrypt
 
-	validates :first_name, :last_name, :username, :email, :phone_number, :password, presence: true  
+	validates :first_name, :last_name, :username, :email, :phone_number, presence: true  
   validates :username, :email, uniqueness: true 
   
   def password
@@ -16,3 +16,4 @@ class User < ActiveRecord::Base
     self.hashed_password = @password
   end
 end
+

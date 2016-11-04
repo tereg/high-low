@@ -7,6 +7,7 @@
 
 # # USERS NEW
 get '/users/new' do
+
   @user = User.new
   erb :'users/new'
 end
@@ -14,7 +15,7 @@ end
 # USERS CREATE
 post '/users' do
 
-  if params[:password_confirmation] == params[:user][:password]
+  if params[:password_confirmation] == params[:user][:password] && params[:user][:password].length > 6
     @user = User.new(params[:user])
 
     if @user.save
@@ -51,7 +52,6 @@ end
 #   @user.update(params[:user])
 #   redirect "/users/#{@user.id}"
 # end
-
 
 # # USERS DESTROY
 # delete '/users/:id' do
