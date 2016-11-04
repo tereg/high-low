@@ -1,24 +1,18 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  # users.password_hash in the database is a :string
+  
   include BCrypt
 
-	validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :username
-  validates_uniqueness_of :username
-  validates_presence_of :password
-  validates_presence_of :email
-  validates_uniqueness_of :email
+	validates :first_name, :last_name, :username, :email, :phone_number, :password, presence: true  
+  validates :username, :email, uniqueness: true 
   
   def password
-    @password ||= Password.new(password_hash)
+    @password ||= Password.new(hashed_password)
   end
 
   def password=(new_password)
     @password = Password.create(new_password)
-    self.password_hash = @password
+    self.hashed_password = @password
   end
-
 end
