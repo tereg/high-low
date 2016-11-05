@@ -14,23 +14,18 @@ end
 
 # USERS CREATE
 post '/users' do
+  @user = User.new(params[:user])
+  @user.save
+  @errors = @user.errors.full_messages
 
   if params[:password_confirmation] == params[:user][:password] && params[:user][:password].length > 6
-    @user = User.new(params[:user])
-
     if @user.save
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
-    else
-      @errors = @user.errors.full_messages
-      erb :'users/new'
     end
-
   else
-    @errors = ["Passwords do not match!"]
     erb :'users/new'
   end
-  
 end
 
 # # USERS SHOW

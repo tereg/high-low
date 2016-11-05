@@ -1,5 +1,13 @@
 <h1>NEW USER REGISTRATION</h1>
 
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <form action="/users" method="POST">
   <label>First Name: </label><input type="text" name="user[first_name]"><br>
   <label>Last Name: </label><input type="text" name="user[last_name"><br>
