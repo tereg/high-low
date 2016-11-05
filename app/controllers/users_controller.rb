@@ -31,6 +31,7 @@ end
 # # USERS SHOW
 get '/users/:id' do
   @user = User.find(params[:id])
+  @daily_activities = @user.daily_activities
   erb :'users/show'
 end
 

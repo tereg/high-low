@@ -19,3 +19,10 @@ post '/users/:user_id/daily_activities' do
     erb :'daily_activities/new' 
   end 
 end 
+
+get '/users/:user_id/daily_activities/:id' do 
+  @user = User.find(params[:user_id])
+  @daily_activities = @user.daily_activities
+
+  erb :'users/show'
+end
