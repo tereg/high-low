@@ -20,9 +20,9 @@ post '/users/:user_id/daily_activities' do
   end 
 end 
 
-get '/users/:user_id/daily_activities/:id' do 
-  @user = User.find(params[:user_id])
-  @daily_activities = @user.daily_activities
+# get '/users/:user_id/daily_activities/:id' do 
+#   @user = User.find(params[:user_id])
+#   @daily_activities = @user.daily_activities
 
-  erb :'users/show'
-end
+#   erb :'users/show'
+# end
