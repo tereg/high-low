@@ -1,0 +1,10 @@
+<form id="activity-tracker" action="/users/<%= @user.id %>/daily_activities" method="post">
+  <label>What were your highs today?</label><br>
+  <textarea name="highs" cols="90" rows="20"></textarea><br>
+
+  
+  <label>What were your lows today?</label><br>
+  <textarea name="lows"  cols="90" rows="20"></textarea><br>
+
+  <input type="submit" value="Submit">
+</form>
