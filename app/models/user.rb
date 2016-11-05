@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
 	validates :first_name, :last_name, :username, :email, presence: true  
   validates :username, :email, uniqueness: true 
+
+  has_many  :daily_activities
   
   def password
     @password ||= Password.new(hashed_password)
