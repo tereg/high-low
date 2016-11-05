@@ -1,7 +1,5 @@
-<h1>USERS SHOW / PROFILE PAGE</h1>
-<h2>get '/users/:id'</h2>
-
-<% if current_user %>
-  <h2>Welcome <%= current_user.username %>!</h2>
-
+<% if logged_in? %>
+  <h1>Welcome <%= current_user.username %>!</h1>
+<% else %>
+  <h2>You must be logged in to view this page</h2>
 <% end %>
