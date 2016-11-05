@@ -6,7 +6,7 @@ end
 
 get '/users/:user_id/daily_activities/new' do 
   @user = User.find(params[:user_id])
-  erb :'partials/_daily_activities_form' 
+  erb :'daily_activities/new' 
 end 
 
 post '/users/:user_id/daily_activities' do 
@@ -16,6 +16,6 @@ post '/users/:user_id/daily_activities' do
   if @daily_activity.save
     redirect "/users/#{@user.id}"
   else 
-    erb :'partials/_daily_activities_form' 
+    erb :'daily_activities/new' 
   end 
 end 

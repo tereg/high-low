@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <h1>Welcome <%= current_user.username %>!</h1>
-  <%= erb :'/partials/_daily_activities_form' %>
-<% else %>
+  <a href="/users/<%= @user.id %>/daily_activities/new">Add today's highs and lows</a>
+ <% else %>
   <h2>You must be logged in to view this page</h2>
 <% end %>
