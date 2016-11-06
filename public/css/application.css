@@ -1,0 +1,11 @@
+body {
+  background-color: #B9D7EA;
+
+}
+
+#logo {
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
