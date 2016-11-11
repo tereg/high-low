@@ -9,6 +9,7 @@
       <%= activity.highs %><br>
       <%= activity.lows %><br>
       <%= activity.created_at %><br><br>
+      <a href="/daily_activities/<%= activity.id %>/edit">Edit</a>
     <% end  %>
 
   <% else %>

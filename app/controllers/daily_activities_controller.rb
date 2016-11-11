@@ -20,9 +20,24 @@ post '/daily_activities' do
   end 
 end 
 
-# get '/users/:user_id/daily_activities/:id' do 
-#   @user = User.find(params[:user_id])
-#   @daily_activities = @user.daily_activities
+get '/daily_activities/:id/edit' do 
+  @user = current_user
+  @daily_activities = @user.daily_activities
+  @daily_activity = DailyActivity.find(params[:id])
 
-#   erb :'users/show'
-# end
+  erb :'daily_activities/edit'
+end
+
+put '/daily_activities/:id' do 
+  @user = current_user
+  @daily_activity = DailyActivity.find(params[:id])
+
+  @daily_activity.highs = params[:highs]
+  @daily_activity.lows = params[:lows]
+
+  if @daily_activity.save
+    redirect '/daily_activities' 
+  else
+    erb :'daily_activities/edit' 
+  end
+end
