@@ -1,3 +1,17 @@
 <h1>Login</h1>
 
-<%= erb :'sessions/partials/_login_form' %>
+<div class="container">
+  <div class="row">
+
+    <form action="/sessions" method="POST">
+      <div class="form-group col-lg-6 col-lg-offset-3 text-center">
+        <label>Email: </label><input type="email" name="email"><br>
+      </div>
+
+      <div class="form-group col-lg-6 col-lg-offset-3 text-center">
+      <label>Password: </label><input type="password" name="password"><br>
+      </div>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</div>
