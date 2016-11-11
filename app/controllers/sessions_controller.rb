@@ -1,5 +1,9 @@
 get '/sessions/new' do
-  erb :'sessions/new'
+  if request.xhr? 
+    erb :'sessions/partials/_login_form', { layout: false } 
+  else
+    erb :'sessions/new'
+  end 
 end
 
 post '/sessions' do
@@ -14,7 +18,7 @@ post '/sessions' do
   end
 end
 
-delete '/sessions' do
+get '/sessions/delete' do
   logout 
   redirect '/'
 end

@@ -1,6 +1,10 @@
 body {
   background-color: #B9D7EA;
+  font-family: 'Libre Baskerville', serif;
+}
 
+.navbar {
+  background-color: #F7FBFC;
 }
 
 #logo {
@@ -9,3 +13,43 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+#login {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #F7FBFC;
+}
+
+#register {
+  margin-top: 1%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #F7FBFC;
+}
+
+#login-register {
+  margin-top: 1%;
+}
+
+#login-form {
+  margin-top: 1%;
+}
+
+.login-button {
+  background-color: #769FCD;
+  border-style: none;
+  color: black;
+}
+
+#login-button-page {
+  width: 40%;
+  border-radius: 5px;
+  background-color: #769FCD;
+  border-style: none;
+  color: black;
+}
+
+
+
+
+
