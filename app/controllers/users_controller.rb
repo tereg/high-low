@@ -24,7 +24,6 @@ post '/users' do
 
   if params[:password_confirmation] == params[:user][:password] && params[:user][:password].length > 6
     if @user.save 
-      session[:id] = @user.id
       login(@user)
       redirect "/daily_activities/recent"
     end
