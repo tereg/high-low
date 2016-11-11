@@ -7,7 +7,6 @@
 
 # # USERS NEW
 get '/users/new' do
-
   @user = User.new
   erb :'users/new'
 end
@@ -27,13 +26,6 @@ post '/users' do
     erb :'users/new'
   end
 end
-
-# # USERS SHOW
-# get '/users/:id' do
-#   @user = User.find(params[:id])
-#   @daily_activities = @user.daily_activities
-#   erb :'users/show'
-# end
 
 # # USERS EDIT
 # get '/users/:id/edit' do
