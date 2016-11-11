@@ -1,15 +1,17 @@
-<% if logged_in? %>
-  <h1>Welcome <%= current_user.username %>!</h1>
-  <a href="/users/<%= @user.id %>/daily_activities/new">Add today's highs and lows</a>
+<div class="container">
+  <% if logged_in? %>
+    <h1>Welcome <%= current_user.username %>!</h1>
+    <a href="/users/<%= @user.id %>/daily_activities/new">Add today's highs and lows</a>
 
-  <h2>Your highs and lows the past 7 days are:</h2>
-  
-  <% @daily_activities.last(7).each do |activity| %>
-    <%= activity.highs %><br>
-    <%= activity.lows %><br>
-    <%= activity.created_at %><br><br>
-  <% end  %>
+    <h2>Your highs and lows the past 7 days are:</h2>
+    
+    <% @daily_activities.last(7).reverse.each do |activity| %>
+      <%= activity.highs %><br>
+      <%= activity.lows %><br>
+      <%= activity.created_at %><br><br>
+    <% end  %>
 
-<% else %>
-  <h2>You must be logged in to view this page</h2>
-<% end %>
+  <% else %>
+    <h2>You must be logged in to view this page</h2>
+  <% end %>
+</div>
