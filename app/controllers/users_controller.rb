@@ -21,7 +21,7 @@ post '/users' do
   if params[:password_confirmation] == params[:user][:password] && params[:user][:password].length > 6
     if @user.save
       session[:id] = @user.id
-      redirect "/users/#{@user.id}"
+      redirect "/daily_activities"
     end
   else
     erb :'users/new'
@@ -29,11 +29,11 @@ post '/users' do
 end
 
 # # USERS SHOW
-get '/users/:id' do
-  @user = User.find(params[:id])
-  @daily_activities = @user.daily_activities
-  erb :'users/show'
-end
+# get '/users/:id' do
+#   @user = User.find(params[:id])
+#   @daily_activities = @user.daily_activities
+#   erb :'users/show'
+# end
 
 # # USERS EDIT
 # get '/users/:id/edit' do

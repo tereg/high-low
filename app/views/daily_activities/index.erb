@@ -1,7 +1,7 @@
 <div class="container">
   <% if logged_in? %>
-    <h1>Welcome <%= current_user.username %>!</h1>
-    <a href="/users/<%= @user.id %>/daily_activities/new">Add today's highs and lows</a>
+    <h1>Welcome, <%= current_user.username %>!</h1>
+    <a href="/daily_activities/new">Add today's highs and lows</a>
 
     <h2>Your highs and lows the past 7 days are:</h2>
     
