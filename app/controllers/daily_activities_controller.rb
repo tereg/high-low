@@ -4,6 +4,12 @@ get '/daily_activities' do
   erb :'daily_activities/index'
 end
 
+get '/daily_activities/recent' do 
+  @user = current_user
+  @daily_activities = @user.daily_activities
+  erb :'daily_activities/recent'
+end 
+
 get '/daily_activities/new' do 
   @user = current_user
   erb :'daily_activities/new' 
@@ -14,7 +20,7 @@ post '/daily_activities' do
   @daily_activity = DailyActivity.new({user_id: current_user.id, highs: params[:highs], lows: params[:lows]})
 
   if @daily_activity.save
-    redirect "/daily_activities"
+    redirect "/daily_activities/recent"
   else 
     erb :'daily_activities/new' 
   end 
@@ -36,7 +42,7 @@ put '/daily_activities/:id' do
   @daily_activity.lows = params[:lows]
 
   if @daily_activity.save
-    redirect '/daily_activities' 
+    redirect '/daily_activities/recent' 
   else
     erb :'daily_activities/edit' 
   end
