@@ -1,10 +1,12 @@
 body {
   background-color: #B9D7EA;
   font-family: 'Libre Baskerville', serif;
+  font-color: #48280c;
 }
 
 .navbar {
   background-color: #F7FBFC;
+  color: #48280c;
 }
 
 #logo {
@@ -24,7 +26,14 @@ body {
   margin-top: 1%;
   width: 50%;
   border-radius: 5px;
-  background-color: #F7FBFC;
+}
+
+#register-form {
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  border-radius: 5px;
 }
 
 #login-register {
@@ -47,6 +56,32 @@ body {
   background-color: #769FCD;
   border-style: none;
   color: black;
+}
+
+#post-date {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.category {
+  font-size: 22px;
+}
+
+.card {
+  background-color: #F7FBFC;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-top: 1px;
+}
+
+h1, h2, h3, h4, label {
+  color: #48280c;
+}
+
+#edit-link {
+  font-size: 16px;
+  font-style: italic;
 }
 
 

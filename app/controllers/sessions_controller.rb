@@ -11,7 +11,7 @@ post '/sessions' do
 
   if @user && @user.password == params[:password]
     login(@user)
-    redirect "/users/#{@user.id}"
+    redirect "/daily_activities/recent"
   else
     @errors = ["Username && Password not found."]
     erb :'sessions/new'
