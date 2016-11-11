@@ -56,6 +56,19 @@ body {
   color: black;
 }
 
+#post-date {
+  font-size: 18px;
+}
+
+.category {
+  font-size: 22px;
+}
+
+.card {
+  background-color: #F7FBFC;
+  border-radius: 5px;
+}
+
 
 
 

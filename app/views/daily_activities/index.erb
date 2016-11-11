@@ -1,18 +1,32 @@
+<% require 'date'  %>
+
 <div class="container">
+  <div class="row">
+    <div id="logo-container" class="col-lg-8 col-lg-offset-2">
   <% if logged_in? %>
     <h1>Welcome, <%= current_user.username %>!</h1>
     <a href="/daily_activities/new">Add today's highs and lows</a>
 
+
     <h2>Your highs and lows the past 7 days are:</h2>
     
     <% @daily_activities.last(7).reverse.each do |activity| %>
-      <%= activity.highs %><br>
-      <%= activity.lows %><br>
-      <%= activity.created_at %><br><br>
-      <a href="/daily_activities/<%= activity.id %>/edit">Edit</a>
+      <div class="row">
+        <div class="card">  
+          <h3 class="category">Highs:</h3><br>
+          <%= activity.highs %><br>
+          <h3 class="category">Lows:</h3><br>
+          <%= activity.lows %><br><br>
+          <h4 class="pull-right" id="post-date"><%= (activity.created_at).strftime("%A, %b %d, %Y") %></h4>
+          <!-- <a href="/daily_activities/<%= activity.id %>/edit">Edit</a> -->
+        </div>
+      </div>
     <% end  %>
+
 
   <% else %>
     <h2>You must be logged in to view this page</h2>
   <% end %>
+  </div>
+</div>
 </div>
