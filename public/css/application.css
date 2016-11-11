@@ -1,6 +1,9 @@
 body {
   background-color: #B9D7EA;
+}
 
+.navbar {
+  background-color: #F7FBFC;
 }
 
 #logo {
@@ -11,15 +14,20 @@ body {
 }
 
 #login {
-  margin-left: 25%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #F7FBFC;
 }
 
 #register {
-  margin-right: 25%;
+  margin-top: 1%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #F7FBFC;
 }
-
-
 
 #login-register {
   margin-top: 1%;
 }
+
+
