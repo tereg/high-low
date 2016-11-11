@@ -1,5 +1,3 @@
-<% require 'date'  %>
-
 <div class="container">
   <div class="row">
     <div id="logo-container" class="col-lg-8 col-lg-offset-2">
@@ -12,13 +10,15 @@
     
     <% @daily_activities.last(7).reverse.each do |activity| %>
       <div class="row">
-        <div class="card">  
-          <h3 class="category">Highs:</h3><br>
-          <%= activity.highs %><br>
-          <h3 class="category">Lows:</h3><br>
-          <%= activity.lows %><br><br>
-          <h4 class="pull-right" id="post-date"><%= (activity.created_at).strftime("%A, %b %d, %Y") %></h4>
-          <!-- <a href="/daily_activities/<%= activity.id %>/edit">Edit</a> -->
+        <div class="card card-block">  
+          <h3 class="category">Highs:</h3>
+          <p><%= activity.highs %></p><br>
+          <h3 class="category">Lows:</h3>
+          <p><%= activity.lows %><p>
+
+          <h4 class="pull-right" id="post-date"> <%= (activity.created_at).strftime("%A, %b %d, %Y") %> </h4><br><br>
+          <h4 id="edit-link" class="pull-right"><a href="/daily_activities/<%= activity.id %>/edit">Edit</a></h4>
+       
         </div>
       </div>
     <% end  %>

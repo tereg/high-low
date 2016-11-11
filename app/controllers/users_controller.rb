@@ -8,7 +8,12 @@
 # # USERS NEW
 get '/users/new' do
   @user = User.new
-  erb :'users/new'
+
+  if request.xhr? 
+     erb :'users/partials/_registration_form', { layout: false } 
+  else 
+    erb :'users/new'
+  end 
 end
 
 # USERS CREATE
