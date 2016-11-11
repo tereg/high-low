@@ -23,11 +23,12 @@ post '/users' do
   @errors = @user.errors.full_messages
 
   if params[:password_confirmation] == params[:user][:password] && params[:user][:password].length > 6
-    if @user.save
-      session[:id] = @user.id
-      redirect "/daily_activities"
+    if @user.save 
+      login(@user)
+      redirect "/daily_activities/recent"
     end
   else
+    @errors = @user.errors.full_messages
     erb :'users/new'
   end
 end

@@ -33,8 +33,9 @@ var clickRegisterListener = function() {
   });
 
   request.done(function(response){
+    $("#logo-container").hide();
     $("#login-register").hide();
-    $("#logo-container").append(response);
+    $("#index-row").append(response);
   });
   });
 }
