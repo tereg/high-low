@@ -1,8 +1,8 @@
-<% if current_user %>
-  <div class="navbar-header">
-    <a href="/" class="navbar-brand">High-Low</a>
-  </div>
+<div class="navbar-header">
+  <a href="/" class="navbar-brand">High-Low</a>
+</div>
 
+<% if current_user %>
   <ul class="nav navbar-nav">
     <li><a href="/users/<%= current_user.id %> ">Profile Page</a></li>
     <li><a href="/sessions/delete">Logout</a></li>
