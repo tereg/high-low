@@ -10,9 +10,16 @@ body {
   margin-right: auto;
 }
 
-
-.form-control {
-  width: 100%;
-
+#login {
+  margin-left: 25%;
 }
 
+#register {
+  margin-right: 25%;
+}
+
+
+
+#login-register {
+  margin-top: 1%;
+}

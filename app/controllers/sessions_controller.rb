@@ -14,7 +14,7 @@ post '/sessions' do
   end
 end
 
-delete '/sessions' do
+get '/sessions/delete' do
   logout 
   redirect '/'
 end

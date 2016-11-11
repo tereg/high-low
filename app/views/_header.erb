@@ -2,11 +2,9 @@
   <div class="navbar-header">
     <a href="/" class="navbar-brand">High-Low</a>
   </div>
+
   <ul class="nav navbar-nav">
     <li><a href="/users/<%= current_user.id %> ">Profile Page</a></li>
+    <li><a href="/sessions/delete">Logout</a></li>
   </ul>
-  <form action="/sessions" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Logout">
-  </form>
 <% end %>
