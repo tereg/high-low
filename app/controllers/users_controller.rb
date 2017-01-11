@@ -1,11 +1,3 @@
-
-# USERS INDEX
-# get '/users' do
-#   @users = User.all
-#   erb :'users/index'
-# end
-
-# # USERS NEW
 get '/users/new' do
   @user = User.new
 
@@ -16,7 +8,6 @@ get '/users/new' do
   end 
 end
 
-# USERS CREATE
 post '/users' do
   @user = User.new(params[:user])
   @user.save
