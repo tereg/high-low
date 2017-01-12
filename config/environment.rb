@@ -15,8 +15,6 @@ require 'date'
 require 'dotenv'
 Dotenv.load
 
-require_relative '../lib/notifier'
-
 require 'pg'
 require 'active_record'
 require 'logger'
