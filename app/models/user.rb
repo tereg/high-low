@@ -1,7 +1,6 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  
   include BCrypt
 
 	validates :username, :email, presence: true  
@@ -18,4 +17,3 @@ class User < ActiveRecord::Base
     self.hashed_password = @password
   end
 end
-

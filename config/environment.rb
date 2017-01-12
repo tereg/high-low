@@ -10,13 +10,10 @@ require 'rubygems'
 
 require 'uri'
 require 'pathname'
-require 'twilio-ruby' 
 require 'date'
  
 require 'dotenv'
 Dotenv.load
-
-require_relative '../lib/notifier'
 
 require 'pg'
 require 'active_record'
