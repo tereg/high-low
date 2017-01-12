@@ -1,27 +1,10 @@
 
-### Purpose
-The Sinatra Skeleton:
+### High Low
+High Low is a Sinatra application that allows users to keep track of their daily highs and lows. By reading their weekly and all time history, users are able to notice patterns in their lives and become more attuned to what gives them joy and what drains them. With this information, users can make better decisions about how to go about living their daily lives. 
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails
-
-### Quickstart
-
-1.  `bundle install`
-2.  `shotgun config.ru`
-
-As needed, create models & migrations with the `rake` tasks:
-
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
-
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+Users can:
+* Register for an account
+* Enter their daily highs and lows
+* Edit their highs and lows
+* View their highs and lows for the past 7 days when they first log in to their account
+* View their all time high-low history  
