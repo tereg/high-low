@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   background-image: url("/Up/Snapshots/Up.jpg");
   font-family: 'Handlee', cursive;
@@ -5,6 +6,15 @@ body {
   background-size: cover;
 }
 
+h1, h2, h3, h4, label {
+  color: black;
+}
+
+label {
+  font-size: 40px;
+  color: #F7FBFC;
+  text-shadow: 1px 2px 1px black;
+}
 
 .btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
     color: #4682B4;
@@ -19,149 +29,20 @@ body {
   color: white;
   border: 1pt solid white;
   font-size: 30px;
-}
-
-.front-page-text {
-  position: absolute;
-  z-index: 20000;
-  top: 25%;
-  left: 10%;
-  right: 10%;
-  text-align: center;
-  display: block;
-}
-
-.front-page-text * {
-  color: #F7FBFC;
+  text-shadow: 1px 1px 1px black;
 
 }
 
-.front-page-text h1{
-  font-size: 100px;
-  text-shadow: 2px 2px 2px black;
-
-
-}
-
-.front-page-text h2{
-  font-size: 50px;
-  text-shadow: 1px 2px 1px black;
-  padding-bottom: 40px;
-
-}
-
-.login-button {
-  box-shadow: 1px 1px 5px black;
-
-}
-
+/* Navbar */
 .navbar {
   background-color: #F7FBFC;
-
 }
 
 .navbar-brand {
   font-size: 22px;
 }
-/*
-#logo {
-  border-radius: 25px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}*/
 
-
-
-#register, #login {
-  margin: 5px;
-  box-shadow: 2px 2px 5px black;
-
-}
-
-#register-form {
-  width: 65%;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 20000;
-  top: 30%;
-/*  left: 10%;
-  right: 10%;*/
-  display: block;
-  font-size: 30px;
-  text-shadow: 1px 1px 1px black;
-}
-
-.form-container {
-  margin-top: 1%;
-  position: absolute;
-  z-index: 20000;
-  top: 60%;
-  left: 20%;
-  right: 20%;
-  display: inline-block;
-}
-
-.form-control {
-  width: 300px !important;
-  box-shadow: 1px 1px 5px black;
-}
-
-
-
-#login-form {
-  margin-top: 1%;
-  font-size: 45px;
-  text-shadow: 1px 1px 1px black;
-}
-
-
-
-#login-button-page {
-  width: 40%;
-  border-radius: 5px;
-  background-color: #769FCD;
-  border-style: none;
-  color: black;
-}
-
-#login-register a {
-  text-shadow: 1px 1px 1px black;
-}
-
-#post-date {
-  font-size: 16px;
-  font-style: italic;
-}
-
-.category {
-  font-size: 22px;
-}
-
-.card {
-  background-color: #F7FBFC;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 15px;
-  padding-top: 1px;
-}
-
-h1, h2, h3, h4, label {
-  color: black;
-}
-
-label {
-  font-size: 45px;
-  color: #F7FBFC;
-  text-shadow: 1px 2px 1px black;
-
-}
-
-#edit-link {
-  font-size: 16px;
-  font-style: italic;
-}
-
+/* Video Background */
 .homepage-hero-module {
     border-right: none;
     border-left: none;
@@ -205,7 +86,119 @@ label {
     width: 100%;
 }
 
+/* Landing Page */
+.form-container {
+  margin-top: 1%;
+  position: absolute;
+  z-index: 20000;
+  top: 60%;
+  left: 20%;
+  right: 20%;
+  display: inline-block;
+}
+
+.front-page-text {
+  position: absolute;
+  z-index: 20000;
+  top: 25%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  display: block;
+}
+
+.front-page-text * {
+  color: #F7FBFC;
+}
+
+.front-page-text h1{
+  font-size: 100px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.front-page-text h2{
+  font-size: 50px;
+  text-shadow: 1px 2px 1px black;
+  padding-bottom: 40px;
+}
+
+.login-button {
+  box-shadow: 1px 1px 5px black;
+}
+
+#register, #login {
+  margin: 5px;
+  box-shadow: 2px 2px 5px black;
+}
+
+
+/* Registration Form */
+#register-form {
+/*  width: 65%;
+*/  border-radius: 5px;
+  position: absolute;
+  z-index: 20000;
+  top: 30%;
+/*  left: 10%;
+  right: 10%;*/
+  font-size: 30px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.input-lg {
+  font-size: 25px;
+  color:  #696969;
+}
+
+/* Login Forms */
+#login-form .form-control {
+  width: 300px !important;
+  box-shadow: 1px 1px 5px black;
+}
+
+
+/* Login Form */
+#login-form {
+  margin-top: 1%;
+  font-size: 45px;
+  text-shadow: 1px 1px 1px black;
+}
 
 
 
+#login-button-page {
+  width: 40%;
+  border-radius: 5px;
+  background-color: #769FCD;
+  border-style: none;
+  color: black;
+}
+
+#login-register a {
+  text-shadow: 1px 1px 1px black;
+}
+
+#post-date {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.category {
+  font-size: 22px;
+}
+
+.card {
+  background-color: #F7FBFC;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-top: 1px;
+}
+
+
+
+#edit-link {
+  font-size: 16px;
+  font-style: italic;
+}
 
