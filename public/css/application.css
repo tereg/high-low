@@ -33,6 +33,13 @@ label {
 
 }
 
+.white-header {
+font-size: 40px;
+color: #F7FBFC;
+  text-shadow: 1px 2px 1px black;
+
+}
+
 /* Navbar */
 .navbar {
   background-color: #F7FBFC;

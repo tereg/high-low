@@ -1,41 +1,39 @@
-<h1 class="text-center">NEW USER REGISTRATION</h1>
+<h1 class="text-center white-header">NEW USER REGISTRATION</h1>
 
 <% if @errors %>
-  <ul>
-    <% @errors.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
 <% end %>
 
 <div class="container">
-  <div class="row"> 
-    <div id="logo-container" class="col-lg-8 col-lg-offset-2">
-      <form id="register-form" action="/users" method="POST">
-        <div class="form-group">
-          <label>Username: </label>
-          <input type="text" class="form-control" name="user[username]"><br>
-        </div>
-
-        <div class="form-group">
-          <label>Email: </label>
-          <input type="email" class="form-control" name="user[email]"><br>
-        </div>
-
-        <div class="form-group">
-          <label>Password: </label>
-          <input type="password" class="form-control" name="user[password]" placeholder="must be at least 6 characters"><br>
-        </div>
-
-        <div class="form-group">
-          <label>Password Confirmation: </label>
-          <input type="password" class="form-control" name="password_confirmation"><br>
-        </div>
-
-        <button type="submit" class="btn btn-default">Create Account</button>
-      </form>
+  <form id="register-form form-inline text" action="/users" method="POST">
+    <div class="row"> 
+      <div class="form-group col-md-6 text-center">
+        <label>Username: </label>
+        <input type="text" class="form-control input-lg" name="user[username]" placeholder="username"><br>
+      </div>
+      <div class="form-group col-md-6 text-center">
+        <label>Email: </label>
+        <input type="email" class="form-control input-lg" name="user[email]" placeholder="email"><br>
+      </div>
     </div>
-  </div>
+    <div class="row"> 
+      <div class="form-group col-md-6 text-center">
+        <label>Password: </label>
+        <input type="password" class="form-control input-lg" name="user[password]" placeholder="must be at least 6 characters"><br>
+      </div>
+      <div class="form-group col-md-6 text-center">
+        <label>Password Confirmation: </label>
+        <input type="password" class="form-control input-lg" name="password_confirmation" placeholder="confirm the password you entered"><br>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-default btn-width">Create Account</button>
+      </div>
+    </div>
+  </form>
 </div>
-
-
