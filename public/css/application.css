@@ -2,12 +2,16 @@
 body {
   background-image: url("/Up/Snapshots/Up.jpg");
   font-family: 'Handlee', cursive;
-  font-color: #F8F8FF;
   background-size: cover;
 }
 
 h1, h2, h3, h4, label {
   color: black;
+}
+
+p {
+  font-size: 22px;
+  line-height: 35px;
 }
 
 label {
@@ -17,10 +21,9 @@ label {
 }
 
 .btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
-    color: #4682B4;
-    background-color: #F8F8FF;
-/*    border-color: #285e8e; set the color you want here
-*/}
+  color: #4682B4;
+  background-color: #F8F8FF;
+}
 
 .btn-width {
   width: 300px !important;
@@ -30,19 +33,18 @@ label {
   border: 1pt solid white;
   font-size: 30px;
   text-shadow: 1px 1px 1px black;
-
 }
 
 .white-header {
-font-size: 40px;
-color: #F7FBFC;
+  font-size: 40px;
+  color: #F7FBFC;
   text-shadow: 1px 2px 1px black;
-
 }
 
 /* Navbar */
 .navbar {
-  background-color: #F7FBFC;
+  background-color: white;
+  font-size: 17px;
 }
 
 .navbar-brand {
@@ -51,47 +53,55 @@ color: #F7FBFC;
 
 /* Video Background */
 .homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
-    margin-top: -20px;
+  border-right: none;
+  border-left: none;
+  position: relative;
+  margin-top: -20px;
 }
+
 .no-video .video-container video,
 .touch .video-container video {
-    display: none;
+  display: none;
 }
+
 .no-video .video-container .poster,
 .touch .video-container .poster {
-    display: block !important;
+  display: block !important;
 }
+
 .video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
 }
+
 .video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
 }
+
 .video-container .filter {
-    z-index: 100;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
+
 .video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
 }
+
 .video-container video.fillWidth {
-    width: 100%;
+  width: 100%;
 }
+
 
 /* Landing Page */
 .form-container {
@@ -138,62 +148,40 @@ color: #F7FBFC;
   box-shadow: 2px 2px 5px black;
 }
 
-
-/* Registration Form */
-#register-form {
-/*  width: 65%;
-*/  border-radius: 5px;
-  position: absolute;
-  z-index: 20000;
-  top: 30%;
-/*  left: 10%;
-  right: 10%;*/
-  font-size: 30px;
-  text-shadow: 1px 1px 1px black;
-}
-
+/* Forms */
 .input-lg {
-  font-size: 25px;
+  font-size: 22px;
   color:  #696969;
-}
-
-/* Login Forms */
-#login-form .form-control {
-  width: 300px !important;
-  box-shadow: 1px 1px 5px black;
-}
-
-
-/* Login Form */
-#login-form {
-  margin-top: 1%;
-  font-size: 45px;
-  text-shadow: 1px 1px 1px black;
-}
-
-
-
-#login-button-page {
-  width: 40%;
-  border-radius: 5px;
-  background-color: #769FCD;
-  border-style: none;
-  color: black;
+  line-height: 35px;
 }
 
 #login-register a {
   text-shadow: 1px 1px 1px black;
 }
 
-#post-date {
-  font-size: 16px;
-  font-style: italic;
+/* Registration Form */
+#register-form {
+  border-radius: 5px;
+  position: absolute;
+  z-index: 20000;
+  top: 30%;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px black;
 }
 
-.category {
-  font-size: 22px;
+/* Login Form */
+#login-form .form-control {
+  width: 300px !important;
+  box-shadow: 1px 1px 5px black;
 }
 
+#login-form {
+  margin-top: 1%;
+  font-size: 45px;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Daily Activities index and recent pages */
 .card {
   background-color: #F7FBFC;
   border-radius: 5px;
@@ -202,10 +190,29 @@ color: #F7FBFC;
   padding-top: 1px;
 }
 
+.category {
+  font-size: 22px;
+}
 
-
-#edit-link {
+.edit-link {
   font-size: 16px;
   font-style: italic;
 }
 
+.edit-link a:link {
+  color: black;
+}
+
+.edit-link a:visited {
+    color: black;
+}
+
+#post-date {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Submit button on Daily Activities edit page */
+.edit-submit {
+  margin-bottom: 20px;
+}
