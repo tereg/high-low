@@ -1,16 +1,16 @@
 <div class="col-lg-8 col-lg-offset-2 text-center">
-<h1>Login</h1><br>
-  <div class="container">
-    <div class="row">
-      <form action="/sessions" method="POST">
-        <div class="form-group col-lg-6 col-lg-offset-3 text-center">
-          <label>Email: </label><br>
-          <input type="email" name="email"><br><br>
-          <label>Password: </label><br>
-          <input type="password" name="password"><br>
-          <button id="login-button-page" type="submit" class="btn btn-primary btn-width">Login</button>
-        </div>
-      </form>
-    </div>
+  <h1 class="white-header">Login</h1><br>
+  <div id="login-form">
+    <form class="form-inline text-center" action="/sessions" method="POST">
+      <div class="form-group">
+        <label>Email: </label>
+        <input type="email" name="email" class="form-control input-lg">
+      </div>
+      <div class="form-group">
+        <label>Password: </label>
+        <input type="password" class="form-control  input-lg" name="password">
+      </div><br>
+      <button type="submit" class="btn btn-primary login-button btn-width">Login</button>
+    </form>
   </div>
 </div>
