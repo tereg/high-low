@@ -6,19 +6,29 @@
   </ul>
 <% end %>
 
-<div class="container">
-  <div id="index-row" class="row">
-    <div id="logo-container" class="col-lg-8 col-lg-offset-2">
-      <img id="logo" class="img-responsive" src="logo.png" alt="high-low-logo">
+<div class="landing-page">
+  <div class="homepage-hero-module">
+      <div class="video-container">
+          <div class="filter"></div>
+          <video autoplay loop class="fillWidth">
+              <source src="Up/MP4/Up.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+              <source src="Up/WEBM/Up.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          </video>
+          <div class="poster hidden">
+              <img src="Up/Snapshots/Up.jpg" alt="">
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="front-page-text">
+      <h1 class="app-name">High Low</h1>
+      <h2>Keep track of your daily highs and lows</h2>
+    </div>
+    <div class="form-container">
+      <div id="login-register" class="col-md-12 text-center">
+        <a id="login" class="btn btn-default btn-width" href="/sessions/new" role="button">Login</a>
+        <a id="register" class="btn btn-default btn-width" href="/users/new" role="button">Register</a>
+      </div>
     </div>
   </div>
-  <div id="login-register" class="col-lg-6 col-lg-offset-3 text-center">
-    <a id="login" class="btn btn-default" href="/sessions/new" role="button">Login</a>
-    <a id="register" class="btn btn-default" href="/users/new" role="button">Register</a>
-  </div>
 </div>
-
-
-
-    
-  

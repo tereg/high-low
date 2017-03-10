@@ -2,7 +2,7 @@
   <div class="row">
     <div id="logo-container" class="col-lg-8 col-lg-offset-2">
       <% if logged_in? %>
-        <h2>Here's your high low history, <%= current_user.username %>:</h2>
+        <h2 class="white-header">Here's your high low history, <%= current_user.username %>:</h2>
           <% @daily_activities.reverse.each do |activity| %>
             <div class="row">
               <div class="card card-block">  
@@ -11,7 +11,7 @@
                 <h3 class="category">Lows:</h3>
                 <p><%= activity.lows %><p>
                 <h4 class="pull-right" id="post-date"> <%= (activity.created_at).strftime("%A, %b %d, %Y") %> </h4><br><br>
-                <h4 id="edit-link" class="pull-right"><a href="/daily_activities/<%= activity.id %>/edit">Edit</a></h4>
+                <h4 class="edit-link pull-right"><a href="/daily_activities/<%= activity.id %>/edit">Edit</a></h4>
               </div>
             </div>
           <% end  %>
