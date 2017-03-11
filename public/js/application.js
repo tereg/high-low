@@ -34,7 +34,7 @@ var clickRegisterListener = function() {
 
     request.done(function(response){
       $("#login-register").hide();
-      $(".front-page-text").append(response);
+      $(".front-page-text").replaceWith(response);
     });
   });
 }
