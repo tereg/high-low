@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  border: 1pt solid red;
 }
 
 /* General Styles */
@@ -153,17 +154,15 @@ label {
 }
 
 /* Forms */
-.form-center {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
 .input-lg {
   font-size: 20px;
   color:  #696969;
   line-height: 20px;
   width: 325px !important;
+}
 
+#form-group {
+  display: inline-block;
 }
 
 #login-register a {
@@ -174,9 +173,19 @@ label {
 #register-form {
   position: absolute;
   z-index: 20000;
-  top: 30%;
   font-size: 20px;
   text-shadow: 1px 1px 1px black;
+  border: 2pt solid pink;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#register-form .input-lg {
+  margin: 0 auto;
 }
 
 /* Login Form*/
