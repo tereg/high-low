@@ -1,12 +1,12 @@
 get '/daily_activities' do 
   @user = current_user
-  @daily_activities = @user.daily_activities
+  @daily_activities = @user.daily_activities.sort_by {|activity| activity.id}
   erb :'daily_activities/index'
 end
 
 get '/daily_activities/recent' do 
   @user = current_user
-  @daily_activities = @user.daily_activities
+  @daily_activities = @user.daily_activities.sort_by {|activity| activity.id}
   erb :'daily_activities/recent'
 end 
 
